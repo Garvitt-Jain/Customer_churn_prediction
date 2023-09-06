@@ -56,7 +56,7 @@ To run the project, follow these steps:
 
 Download the dataset 'customer_churn_large_dataset.xlsx'.
 Open The file in Google Collab
-Run pip install requirements.txt to install the necessary packages.
+import or install the necessary packages.
 Download the 'app.py' files.
 Execute 'Customer_churn.ipynb'.
 Provide inputs to assess the model's accuracy in predicting customer churn.
