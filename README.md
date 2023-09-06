@@ -54,7 +54,7 @@ How to Run:
 
 To run the project, follow these steps:
 
-Download the dataset 'Telco-Customer-churn.csv'.
+Download the dataset 'customer_churn_large_dataset.xlsx'.
 Open The file in Google Collab
 Run pip install requirements.txt to install the necessary packages.
 Download the 'app.py' files.
