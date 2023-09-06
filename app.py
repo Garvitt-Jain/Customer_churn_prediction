@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
+import xgboost
 from PIL import Image
 
 #load the model from disk
-model = pickle.load(open('model.pkl','rb'))
+model = joblib.load(open('model.pkl','rb'))
 #Import python scripts
 
 dict = {'Male':1,"Female":0,"Los Angeles":2 ,"New York":4 ,"Miami":3 ,"Chicago":0 ,"Houston":1}
