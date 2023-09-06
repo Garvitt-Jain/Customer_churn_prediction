@@ -1,10 +1,17 @@
+import xgboost as xgb
 import streamlit as st
-import pickle
-import xgboost
+import pandas as pd
+
+#Loading up the Regression model we created
+model = xgb.XGBRegressor()
+model.load_model('xgb_model.json')
+
+#Caching the model for faster loading
+@st.cache
 from PIL import Image
 
 #load the model from disk
-model = pickle.load(open('model.pkl','rb'))
+#model = pickle.load(open('model.pkl','rb'))
 #Import python scripts
 
 dict = {'Male':1,"Female":0,"Los Angeles":2 ,"New York":4 ,"Miami":3 ,"Chicago":0 ,"Houston":1}
