@@ -14,7 +14,7 @@ model.load_model('xgb_model.json')
 #model = pickle.load(open('model.pkl','rb'))
 #Import python scripts
 
-dict = {'Male':1,"Female":0,"Los Angeles":2 ,"New York":4 ,"Miami":3 ,"Chicago":0 ,"Houston":1}
+d = {'Male':1,"Female":0,"Los Angeles":2 ,"New York":4 ,"Miami":3 ,"Chicago":0 ,"Houston":1}
 def main():
     #Setting Application title
     st.title('Customer Churn Prediction App')
@@ -43,8 +43,8 @@ def main():
     totalusage = st.number_input('The total amount of data used by customer in GB',min_value=50, max_value=500, value=50)
 
     data = {'Age': (age - 18)/52,
-            'Gender': dict[gender],
-            'Location': dict[location],
+            'Gender': d[gender],
+            'Location': d[location],
             'Subscription_Length_Months':(tenure -1)/23,
             'Monthly_Bill': (monthlycharges - 30)/70,
             'Total_Usage_GB': (totalusage - 50)/500
