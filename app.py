@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 #Loading up the Regression model we created
-model = xgb.XGBRegressor()
+model = xgb.XGBClassifier()
 model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
