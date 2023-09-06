@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import xgboost
 from PIL import Image
 
 #load the model from disk
