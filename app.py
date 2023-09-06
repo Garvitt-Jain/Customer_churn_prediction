@@ -8,7 +8,7 @@ model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
 @st.cache
-from PIL import Image
+# from PIL import Image
 
 #load the model from disk
 #model = pickle.load(open('model.pkl','rb'))
@@ -27,7 +27,7 @@ def main():
     st.markdown("<h3></h3>", unsafe_allow_html=True)
 
     #Setting Application sidebar default
-    image = Image.open('app.jpg')
+    # image = Image.open('app.jpg')
     st.sidebar.info('This app is created to predict Customer Churn of data services by Garvit Jain')
     st.sidebar.image(image)
 
