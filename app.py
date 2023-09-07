@@ -14,7 +14,7 @@ import pandas as pd
 #model = pickle.load(open('model.pkl','rb'))
 #Import python scripts
 
-#city_mapping = {'Male': 1, 'Female': 0, 'Los Angeles': 2, 'New York': 4, 'Miami': 3, 'Chicago': 0, 'Houston': 1}
+city_mapping = {'Male': 1, 'Female': 0, 'Los Angeles': 2, 'New York': 4, 'Miami': 3, 'Chicago': 0, 'Houston': 1}
 def main():
     #Setting Application title
     st.title('Customer Churn Prediction App')
@@ -29,7 +29,7 @@ def main():
     #Setting Application sidebar default
     # image = Image.open('app.jpg')
     st.sidebar.info('This app is created to predict Customer Churn of data services by Garvit Jain')
-    st.sidebar.image(image)
+    #st.sidebar.image(image)
 
     st.info("Input data below")
     #Based on our optimal features selection
@@ -43,8 +43,8 @@ def main():
     totalusage = st.number_input('The total amount of data used by customer in GB',min_value=50, max_value=500, value=50)
 
     data = {'Age': (age - 18)/52,
-            'Gender': gender,
-            'Location': location,
+            'Gender': city_mapping[gender],
+            'Location': city_mapping[location],
             'Subscription_Length_Months':(tenure -1)/23,
             'Monthly_Bill': (monthlycharges - 30)/70,
             'Total_Usage_GB': (totalusage - 50)/500
