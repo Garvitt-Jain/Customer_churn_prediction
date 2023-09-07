@@ -1,10 +1,10 @@
-#import xgboost as xgb
+import xgboost as xgb
 import streamlit as st
 import pandas as pd
 
 #Loading up the Regression model we created
-#model = xgb.XGBClassifier()
-#model.load_model('xgb_model.json')
+model = xgb.XGBClassifier()
+model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
 
@@ -57,7 +57,7 @@ def main():
     #Preprocess inputs
 
 
-    #prediction = model.predict(features_df)
+    prediction = model.predict(features_df)
 
     if st.button('Predict'):
             if prediction == 1:
