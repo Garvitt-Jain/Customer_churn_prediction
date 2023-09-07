@@ -1,6 +1,6 @@
-import xgboost as xgb
 import streamlit as st
 import pandas as pd
+import scikit_learn
 import pickle
 #Loading up the Regression model we created
 # model = xgb.XGBClassifier()
