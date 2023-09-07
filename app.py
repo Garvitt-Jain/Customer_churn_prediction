@@ -7,7 +7,7 @@ model = xgb.XGBClassifier()
 model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
-@st.cache
+
 from PIL import Image
 
 #load the model from disk
