@@ -1,8 +1,8 @@
 import streamlit as st
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-import joblib
-import random
+# import pandas as pd
+# from sklearn.ensemble import RandomForestClassifier
+# import joblib
+# import random
 
 # #Loading up the Regression model we created
 
@@ -58,10 +58,6 @@ def main():
     
     #Preprocess inputs
     prediction =random.randint(0,1)
-
-   
-         
-
     #prediction = model.predict(features_df)
 
     if st.button('Predict'):
