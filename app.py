@@ -2,17 +2,17 @@ import streamlit as st
 import pandas as pd
 import xgboost as xgb
 from sklearn.ensemble import RandomForestClassifier
-#import pickle
+import pickle
 # #Loading up the Regression model we created
 model = xgb.XGBClassifier()
-model.load_model('xgb_model.json')
+
 
 #Caching the model for faster loading
 
 from PIL import Image
 
-#load the model from disk
-#model = pickle.load(open('model.pkl','rb'))
+load the model from disk
+model = pickle.load(open('model.pkl','rb'))
 #Import python scripts
 
 city_mapping = {'Male': 1, 'Female': 0, 'Los Angeles': 2, 'New York': 4, 'Miami': 3, 'Chicago': 0, 'Houston': 1}
