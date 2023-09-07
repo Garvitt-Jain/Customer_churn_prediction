@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
+import random
+
 # #Loading up the Regression model we created
 
 
-model = joblib.load('model.pkl')
+#model = joblib.load('model.pkl')
 #Caching the model for faster loading
 
 from PIL import Image
@@ -55,9 +57,12 @@ def main():
     st.markdown("<h3></h3>", unsafe_allow_html=True)
     
     #Preprocess inputs
+    prediction = random.random()
 
+   
+         
 
-    prediction = model.predict(features_df)
+    #prediction = model.predict(features_df)
 
     if st.button('Predict'):
             if prediction == 1:
