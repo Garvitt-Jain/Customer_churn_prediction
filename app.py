@@ -1,17 +1,17 @@
 import streamlit as st
 import pandas as pd
 import xgboost as xgb
-import pickle
+#import pickle
 #Loading up the Regression model we created
-# model = xgb.XGBClassifier()
-# model.load_model('xgb_model.json')
+model = xgb.XGBClassifier()
+model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
-
+@st.cache
 from PIL import Image
 
 #load the model from disk
-model = pickle.load(open('model.pkl','rb'))
+#model = pickle.load(open('model.pkl','rb'))
 #Import python scripts
 
 city_mapping = {'Male': 1, 'Female': 0, 'Los Angeles': 2, 'New York': 4, 'Miami': 3, 'Chicago': 0, 'Houston': 1}
@@ -60,7 +60,7 @@ def main():
     prediction = model.predict(features_df)
 
     if st.button('Predict'):
-            if prediction[0] == 1:
+            if prediction == 1:
                 st.warning('Yes, the customer will terminate the service.')
             else:
                 st.success('No, the customer is happy with  data Services.')
