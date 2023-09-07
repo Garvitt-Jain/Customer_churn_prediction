@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-import pickle
+import joblib
 # #Loading up the Regression model we created
 
 
-model = pickle.load(open('model.pkl', 'rb'))
+model = joblib.load('model.pkl')
 #Caching the model for faster loading
 
 from PIL import Image
