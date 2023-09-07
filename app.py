@@ -6,7 +6,7 @@ import pickle
 # #Loading up the Regression model we created
 
 
-
+model = pickle.load(open('model.pkl', 'rb'))
 #Caching the model for faster loading
 
 from PIL import Image
@@ -58,7 +58,7 @@ def main():
     #Preprocess inputs
 
 
-    # prediction = model.predict(features_df)
+    prediction = model.predict(features_df)
 
     if st.button('Predict'):
             if prediction == 1:
