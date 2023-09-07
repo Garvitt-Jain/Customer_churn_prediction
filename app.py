@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import xgboost 
+import xgboost as xgb
 import pickle
 #Loading up the Regression model we created
 # model = xgb.XGBClassifier()
@@ -60,7 +60,7 @@ def main():
     prediction = model.predict(features_df)
 
     if st.button('Predict'):
-            if prediction == 1:
+            if prediction[0] == 1:
                 st.warning('Yes, the customer will terminate the service.')
             else:
                 st.success('No, the customer is happy with  data Services.')
