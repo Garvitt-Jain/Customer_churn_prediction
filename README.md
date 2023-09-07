@@ -3,7 +3,7 @@ Enhancing Customer Retention: Exploring  Machine Learning and Deep Learning Mode
 
 Customer Churn Prediction Project Overview:
 
-Project Demo Link: Click Here
+Project Demo Link:[Demo Link]([https://pages.github.com/](https://customerchurnpredictiongarvitjain.streamlit.app/))
 
 Understanding Churn:
 
