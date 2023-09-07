@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import random
 # from sklearn.ensemble import RandomForestClassifier
 # import joblib
 # import random
