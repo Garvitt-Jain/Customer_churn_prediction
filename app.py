@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import xgboost as xgb
-
-import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
