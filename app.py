@@ -4,7 +4,7 @@ import xgboost as xgb
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 # #Loading up the Regression model we created
-model = xgb.XGBClassifier()
+
 
 
 #Caching the model for faster loading
@@ -12,7 +12,7 @@ model = xgb.XGBClassifier()
 from PIL import Image
 
 
-model = pickle.load(open('model.pkl','rb'))
+
 #Import python scripts
 
 city_mapping = {'Male': 1, 'Female': 0, 'Los Angeles': 2, 'New York': 4, 'Miami': 3, 'Chicago': 0, 'Houston': 1}
@@ -58,7 +58,7 @@ def main():
     #Preprocess inputs
 
 
-    prediction = model.predict(features_df)
+    # prediction = model.predict(features_df)
 
     if st.button('Predict'):
             if prediction == 1:
