@@ -57,7 +57,7 @@ def main():
     st.markdown("<h3></h3>", unsafe_allow_html=True)
     
     #Preprocess inputs
-    prediction = random.random()
+    prediction =random.randint(0,1)
 
    
          
