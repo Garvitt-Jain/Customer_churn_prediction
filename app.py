@@ -11,7 +11,7 @@ model = xgb.XGBClassifier()
 
 from PIL import Image
 
-load the model from disk
+
 model = pickle.load(open('model.pkl','rb'))
 #Import python scripts
 
